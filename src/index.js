@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-class Square extends React.Component {
-    render() {
-      return (
-        <button className="square">
-          {this.props.value}      </button>
-      );
-    }
-  }
+//Render dom 
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
