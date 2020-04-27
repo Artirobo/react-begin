@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
+import Loginss  from './LoginControl';
+import Page from './page';
 import Mycomp from './myComp1'
 import Toggle from './Toggle'
 //Render dom 
@@ -181,7 +182,34 @@ const element = <h1>
                       <Mycomp/>
 
                       <Toggle/>
+
+
+                      <Greeting isLoggedIn={false} />
+
+                      <Greeting isLoggedIn={true} />
+
+                      <Loginss/>
+                      
+                      {/* Preventing Component from Rendering */}
+                      <Page/>
                 </h1>;
+
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+
+function UserGreeting(props) {
+  return <h1>Welcome back!</h1>;
+}
+
+function GuestGreeting(props) {
+  return <h1>Please sign up.</h1>;
+}
+
 //Composing Components
 function App() {
   return (
