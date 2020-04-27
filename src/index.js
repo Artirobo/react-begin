@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
+import Mycomp from './myComp1'
+import Toggle from './Toggle'
 //Render dom 
 const name = 'Josh Perez';
 const user = {
@@ -173,6 +176,11 @@ const element = <h1>
                           text={comment.text}
                           author={comment.author}
                           />
+
+                      {/* annother component or js file */}
+                      <Mycomp/>
+
+                      <Toggle/>
                 </h1>;
 //Composing Components
 function App() {
