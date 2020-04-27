@@ -50,13 +50,26 @@ function tick() {
     <div>
       <h1>Hello, world!</h1>
       <h2>It is {new Date().toLocaleTimeString()}.</h2>
+
+      {/* added clock component */}
+        <Clock date={new Date()} />,
+
     </div>
   );
+  // it search as id and added tick in that element
   ReactDOM.render(element1, document.getElementById('as'));
 }
 setInterval(tick, 1000);
 
 
+function Clock(props) {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
 const elementwithDiv = <div />;
 
 const elementCustomComponent = <Welcome name="Sara" />;
